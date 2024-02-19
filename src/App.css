@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+body
+{
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  background-color: hsla(0, 0%, 0%, 0.705);
+}
+
+.app
+{
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+}
+h1
+{
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.7px;
+  text-align: center;
+  background: linear-gradient(to right, hsla(48, 100%, 50%, 0.63), hsl(0, 0%, 0%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.searchInput
+{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5px;
+  box-shadow: 5px 5px 7px hsla(0, 0%, 0%, 0.603), -5px -5px 7px hsla(0, 0%, 0%, 0.603);
+  background: hsla(0, 0%, 0%, 0.603);
+  border-radius: 25px;
+}
+.searchInput input
+{
+  width: 100%;
+  padding: 9px;
+  font-size: 1.15rem;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 700;
+  color: white;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.308);
+  outline: solid;
+  outline-width: 0.2px;
+  outline-color: rgba(218, 165, 32, 0.699);
+}
+.searchInput img 
+{
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.container 
+{
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.movie 
+{
+  width:  300px;
+  height: 400px;
+  margin: 15px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+.empty 
+{
+  width: 100%;
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty h2 
+{
+  font-size: 1.25rem;
+  color: hsla(0, 88%, 47%, 0.904);
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+}
+.movie .movie-year 
+{
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.movie:hover 
+{
+  box-shadow: 0px 30px 18px -8px hsla(0, 0%, 0%, 0.1);
+  transform: scale(1.05, 1.05);
+}
+
+.movie .movie-poster {
+  width: 100%;
+  height: 100%;
+}
+
+.movie .movie-poster img 
+{
+  height: 100%;
+  width: 100%;
+}
+
+.movie div:nth-of-type(3) 
+{
+  z-index: 2;
+  background-color: hsl(204, 5%, 21%);
+  padding: 16px 24px 24px 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.movie div:nth-of-type(3) #movie-type 
+{
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: hsl(0, 0%, 94%);
+}
+
+.movie div:nth-of-type(3) #movie-title 
+{
+  margin-top: 5px;
+  font-family: "Roboto Slab", serif;
+  color: hsl(27, 85%, 84%);
+}
+
+.movie:hover .movie-poster 
+{
+  height: 100%;
+  opacity: 0.3;
+}
+
+.movie:hover div:nth-of-type(3) 
+{
+  background-color: transparent;
+}
+
+.movie:hover .movie-year 
+{
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .app 
+  {
+    padding: 4rem 2rem;
+  }
+
+  .search 
+  {
+    padding: 1rem 1.75rem;
+    width: 100%;
+  }
+
+  .search input 
+  {
+    font-size: 1rem;
+  }
+
+  .search img 
+  {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .app 
+  {
+    padding: 4rem 1rem;
+  }
+
+  h1 
+  {
+    font-size: 2rem;
+  }
+
+  .container
+  {
+    margin-top: 2rem;
+  }
+
+  .movie 
+  {
+    width: "100%";
+    margin: 1rem;
+  }
+}

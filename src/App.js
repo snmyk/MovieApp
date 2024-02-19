@@ -7,17 +7,6 @@ import "./App.css";
 
 
 const API_URL = 'http://www.omdbapi.com?apikey=a971413a';
-const movie = 
-{
-  
-  "Title": "The Incredible Hulk",
-  "Year": "2008",
-  "imdbID": "tt0800080",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_SX300.jpg"
-
-}
-
 const App = () =>
 {
   const [movies, setMovies] = useState([]);
